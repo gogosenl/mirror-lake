@@ -1,24 +1,59 @@
 {
   "expo": {
-    "name": "mirror-lake-expo",
-    "slug": "mirror-lake-expo",
+    "name": "Mirror Lake",
+    "slug": "mirror-lake",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "light",
+    "splash": {
+      "image": "./assets/mirror-lake-splash-art.png",
+      "resizeMode": "cover",
+      "backgroundColor": "#061C24"
+    },
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.gorsengames.mirrorlake",
+      "buildNumber": "1",
+      "infoPlist": {
+        "ITSAppUsesNonExemptEncryption": false
+      }
     },
     "android": {
+      "package": "com.gorsengames.mirrorlake",
       "adaptiveIcon": {
-        "backgroundColor": "#E6F4FE",
+        "backgroundColor": "#CFE8E9",
         "foregroundImage": "./assets/android-icon-foreground.png",
         "backgroundImage": "./assets/android-icon-background.png",
         "monochromeImage": "./assets/android-icon-monochrome.png"
-      }
+      },
+      "permissions": [
+        "android.permission.RECORD_AUDIO",
+        "android.permission.MODIFY_AUDIO_SETTINGS",
+        "android.permission.FOREGROUND_SERVICE",
+        "android.permission.FOREGROUND_SERVICE_MEDIA_PLAYBACK"
+      ]
     },
     "web": {
       "favicon": "./assets/favicon.png"
+    },
+    "plugins": [
+      "expo-audio",
+      "expo-asset",
+      [
+        "expo-splash-screen",
+        {
+          "backgroundColor": "#061C24",
+          "image": "./assets/mirror-lake-splash-art.png",
+          "resizeMode": "cover",
+          "imageWidth": 420
+        }
+      ]
+    ],
+    "extra": {
+      "eas": {
+        "projectId": "8162ec37-6d63-4030-bca3-05614204b5c6"
+      }
     }
   }
 }

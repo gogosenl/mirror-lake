@@ -1,21 +1,14 @@
-The MIT License (MIT)
+Mirror Lake — Proprietary License
 
-Copyright (c) 2015-present 650 Industries, Inc. (aka Expo)
+Copyright © 2026 Görsen Games. All rights reserved.
 
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
+The source code, game design, level data, visual assets, audio assets, branding,
+and accompanying materials in this repository are proprietary to Görsen Games.
 
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
+No part of this repository may be copied, modified, redistributed, sublicensed,
+published, sold, used to create a derivative application, or incorporated into
+another product without prior written permission from Görsen Games.
 
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
+Third-party packages used by the project remain subject to their respective
+licenses. This notice does not restrict rights granted by those third-party
+licenses.

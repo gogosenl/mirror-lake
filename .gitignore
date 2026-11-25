@@ -5,7 +5,10 @@ node_modules/
 
 # Expo
 .expo/
+.expo-temp/
+.eas/
 dist/
+dist-*/
 web-build/
 expo-env.d.ts
 
@@ -13,10 +16,23 @@ expo-env.d.ts
 .kotlin/
 *.orig.*
 *.jks
+*.keystore
 *.p8
 *.p12
+*.pfx
+*.cer
 *.key
 *.mobileprovision
+*.provisionprofile
+*.ipa
+*.apk
+*.aab
+*.xcarchive
+credentials.json
+credentials.*.json
+service-account*.json
+google-services.json
+GoogleService-Info.plist
 
 # Metro
 .metro-health-check*
@@ -30,8 +46,31 @@ yarn-error.*
 .DS_Store
 *.pem
 
-# local env files
-.env*.local
+# local configuration and secrets
+.env
+.env.*
+!.env.example
+.npmrc
+.yarnrc
+.yarnrc.yml
+
+# local test captures and store export packages
+/app-store-assets-*/
+/mirror-*.png
+/*-probe.png
+/home-probe.png
+
+# unused local asset drafts (kept on disk, not shipped by the app)
+/assets/game-mirror.png
+/assets/light-source-v2.png
+/assets/lily-closed.png
+/assets/lily-closed-mobile.png
+/assets/lily-closed-v3.png
+/assets/lily-open.png
+/assets/lily-open-mobile.png
+/assets/lily-open-v3.png
+/assets/mirror-lake-decor-atlas.png
+/assets/victory-crest-premium-v2.png
 
 # typescript
 *.tsbuildinfo
