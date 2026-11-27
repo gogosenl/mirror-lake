@@ -1,5 +1,5 @@
 import React, { useEffect, useMemo, useRef, useState } from 'react';
-import { Alert, Animated, Easing, Image, Modal, Platform, Pressable, ScrollView, StatusBar, StyleSheet, Text, useWindowDimensions, View } from 'react-native';
+import { Alert, Animated, Easing, Image, ImageBackground, Modal, Platform, Pressable, ScrollView, StatusBar, StyleSheet, Text, useWindowDimensions, View } from 'react-native';
 import * as SplashScreen from 'expo-splash-screen';
 
 const GENERATED_LEVELS = require('./levels');
@@ -667,10 +667,7 @@ function ReliableSuccessOverlay({ goldAnim, confettiAnim, walletDisplay, rewardD
   </Pressable>;
 }
 function BackgroundImage({ source, style, children }) {
-  return <View style={[styles.backgroundFrame, style]}>
-    <Image pointerEvents="none" source={source} resizeMode="cover" fadeDuration={0} style={styles.backgroundLayer} />
-    <View style={styles.backgroundContent}>{children}</View>
-  </View>;
+  return <ImageBackground source={source} resizeMode="cover" style={style} imageStyle={styles.backgroundImage}>{children}</ImageBackground>;
 }
 function SafeScreen({ style, children }) { return <View style={[style, { paddingTop: Platform.OS === 'ios' ? 54 : StatusBar.currentHeight || 24 }]}>{children}</View>; }
 
@@ -1054,9 +1051,7 @@ export default function App() {
 const C = { ink: '#16363c', lake: '#cfe8e9', deep: '#77adb5', paper: '#f5f3e9', white: '#fffdf7', gold: '#efc964', coral: '#e5796f', muted: '#6b8182' };
 const styles = StyleSheet.create({
   scene: { flex: 1, backgroundColor: '#062b35', overflow: 'hidden' }, sceneContent: { ...StyleSheet.absoluteFillObject },
-  backgroundFrame: { position: 'relative', overflow: 'hidden' },
-  backgroundLayer: { ...StyleSheet.absoluteFillObject, width: '100%', height: '100%', zIndex: 0 },
-  backgroundContent: { flex: 1, position: 'relative', zIndex: 1 },
+  backgroundImage: { ...StyleSheet.absoluteFillObject, width: '100%', height: '100%' },
   transitionVeil: { ...StyleSheet.absoluteFillObject, zIndex: 4000, elevation: 90, alignItems: 'center', justifyContent: 'center', overflow: 'hidden', backgroundColor: '#062f39' },
   transitionVeilGlow: { width: 220, height: 220, borderRadius: 110, backgroundColor: 'rgba(78,211,199,.10)', shadowColor: '#75eee2', shadowOpacity: .62, shadowRadius: 54, elevation: 2 },
   openingRoot: { ...StyleSheet.absoluteFillObject, zIndex: 5000, elevation: 100, overflow: 'hidden', alignItems: 'center', justifyContent: 'center', backgroundColor: '#041a23' },
